@@ -96,7 +96,7 @@ class TestBooksCollector:
         assert len(collector.get_books_rating()) == 1
 
     #нельзя добавить одну и ту же книгу дважды в избранное
-    def add_new_book_cannot_add_same_book_again(self, collector):
+    def add_book_in_favorites_cannot_add_same_book_again(self, collector):
         collector.add_book_in_favorites(initial_book)
         collector.add_book_in_favorites(initial_book)
         assert len(collector.favorites) == 1
